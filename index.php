@@ -1,9 +1,7 @@
 <?php
 include 'database.php';
+include "init.php"
 
-$query = "SELECT * FROM financetrackerdb.users";
-$query_run = mysqli_query($conn,$query) or die(mysqli_error($conn));
-$rows = mysqli_fetch_all($query_run, MYSQLI_ASSOC);
 
 ?>
 
@@ -16,20 +14,10 @@ $rows = mysqli_fetch_all($query_run, MYSQLI_ASSOC);
     <title>Document</title>
 </head>
 <body>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-        </tr>
-
-        <?php foreach($rows as $row): ?>
-            <tr>
-                <td><?= $row['user_id']?></td>
-                <td><?= $row['user_name']?></td>
-            </tr>
-
-            <?php endforeach; ?>
-    </table>
+    <div class = container>
+        <a href="register.php">Regsiter</a>
+        <a href="login.php">Login</a>
+    </div>
 
     <script src = "script.js"></script>
 </body>
