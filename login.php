@@ -25,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         if(password_verify($inputedPassword, $dbPassword)){
             $_SESSION["user_id"] = $userId;
-            header("Location: index.php");
+            header("Location: dashboard.php");
         } else{
             echo "Password incorrect fuck out of here!" . "<br>";
         }
